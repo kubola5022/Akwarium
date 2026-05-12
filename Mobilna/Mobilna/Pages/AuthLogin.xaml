@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.AuthLogin"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Logowanie"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+            <Label Text="Sterowanie akwarium"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Zaloguj się, aby kontrolować swoje akwarium"
+                   FontSize="14"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10" />
+
+            <Frame Padding="20"
+                   HasShadow="True"
+                   CornerRadius="20"
+                   WidthRequest="320">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Entry x:Name="UsernameEntry"
+                           Placeholder="Login"
+                           Keyboard="Text" />
+
+                    <Entry x:Name="PasswordEntry"
+                           Placeholder="Hasło"
+                           IsPassword="True" />
+
+                    <Button Text="Zaloguj"
+                            Clicked="OnLoginClicked"
+                            HorizontalOptions="Fill" />
+
+                    <Label x:Name="ErrorLabel"
+                           TextColor="Red"
+                           FontSize="12"
+                           HorizontalOptions="Center" />
+
+                    <Button Text="Zarejestruj się"
+                            Clicked="OnRegisterClicked"
+                            HorizontalOptions="Center" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.AquariumSettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="24">
+
+                <!-- ================== SEKCJA 1: DANE OGÓLNE ================== -->
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Informacje o akwarium"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Nazwa akwarium" />
+                    <Entry x:Name="AquariumNameEntry"
+                           Placeholder="Nazwa akwarium" />
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Button Text="Zmień nazwę"
+                                Clicked="OnSaveAquariumNameClicked"
+                                HorizontalOptions="StartAndExpand" />
+
+                        <Button Text="Dodaj akwarium"
+                                Clicked="OnAddAquariumClicked"
+                                HorizontalOptions="End" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <BoxView HeightRequest="1" Opacity="0.2" />
+
+                <!-- ================== SEKCJA 2: ALERTY CZUJNIKÓW ================== -->
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Alerty czujników"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Ustaw minimalne i maksymalne wartości dla czujników."
+                           FontSize="12"
+                           Opacity="0.7" />
+
+                    <CollectionView ItemsSource="{Binding AlertItems}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="0,8,0,0"
+                                       Padding="12"
+                                       CornerRadius="16">
+                                    <VerticalStackLayout Spacing="8">
+
+                                        <HorizontalStackLayout Spacing="8">
+                                            <Button Text="Usuń"
+                                                    BackgroundColor="Red"
+                                                    TextColor="White"
+                                                    Padding="8,4"
+                                                    WidthRequest="70"
+                                                    Clicked="OnDeleteAlertClicked" />
+
+                                            <Label Text="{Binding Name}"
+                                                   FontAttributes="Bold"
+                                                   VerticalOptions="Center" />
+                                        </HorizontalStackLayout>
+
+                                        <Grid ColumnDefinitions="1*,1*,Auto"
+                                              ColumnSpacing="12">
+
+                                            <Entry Placeholder="Min"
+                                                   Keyboard="Numeric"
+                                                   Text="{Binding MinText}" />
+
+                                            <Entry Grid.Column="1"
+                                                   Placeholder="Max"
+                                                   Keyboard="Numeric"
+                                                   Text="{Binding MaxText}" />
+
+                                            <HorizontalStackLayout Grid.Column="2"
+                                                                   Spacing="4"
+                                                                   VerticalOptions="Center">
+                                                <Label Text="Aktywne" FontSize="12" />
+                                                <CheckBox IsChecked="{Binding IsActive}" />
+                                            </HorizontalStackLayout>
+
+                                        </Grid>
+
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Button Text="Zapisz alerty"
+                                Clicked="OnSaveThresholdsClicked"
+                                HorizontalOptions="StartAndExpand" />
+
+                        <Button Text="Dodaj alert"
+                                Clicked="OnAddAlertClicked"
+                                HorizontalOptions="End" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <BoxView HeightRequest="1" Opacity="0.2" />
+
+                <!-- ================== SEKCJA 3: PRZYPOMNIENIA ================== -->
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="Przypomnienia"
+                           FontSize="20"
+                           FontAttributes="Bold" />
+
+                    <Label Text="Powiadomienia cykliczne dla czynności w akwarium."
+                           FontSize="12"
+                           Opacity="0.7" />
+
+                    <CollectionView ItemsSource="{Binding Reminders}">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Margin="0,8,0,0"
+                                       Padding="12"
+                                       CornerRadius="16">
+                                    <VerticalStackLayout Spacing="10">
+
+                                        
+                                        <HorizontalStackLayout Spacing="8">
+                                            <Button Text="Usuń"
+                                                    BackgroundColor="Red"
+                                                    TextColor="White"
+                                                    Padding="8,4"
+                                                    WidthRequest="70"
+                                                    Clicked="OnDeleteReminderClicked" />
+
+                                            <Entry Text="{Binding Name}"
+                                                   Placeholder="Nazwa przypomnienia"
+                                                   FontAttributes="Bold"
+                                                   HorizontalOptions="FillAndExpand" />
+                                        </HorizontalStackLayout>
+
+                                        
+                                        <Grid RowDefinitions="Auto,Auto" RowSpacing="10">
+
+                                            
+                                            <VerticalStackLayout Spacing="2">
+                                                <Label Text="Data"
+                                                       FontSize="12"
+                                                       Opacity="0.7" />
+                                                <DatePicker Date="{Binding LastDate}" />
+                                            </VerticalStackLayout>
+
+                                            
+                                            <Grid Grid.Row="1"
+                                                  ColumnDefinitions="1*,1*"
+                                                  ColumnSpacing="12">
+
+                                                <VerticalStackLayout Spacing="2">
+                                                    <Label Text="Dni"
+                                                           FontSize="12"
+                                                           Opacity="0.7" />
+                                                    <Entry Keyboard="Numeric"
+                                                           Text="{Binding IntervalDays}"
+                                                           HorizontalTextAlignment="Center" />
+                                                </VerticalStackLayout>
+
+                                                <VerticalStackLayout Grid.Column="1" Spacing="2">
+                                                    <Label Text="Godzina"
+                                                           FontSize="12"
+                                                           Opacity="0.7" />
+                                                    <TimePicker Time="{Binding ReminderTime}" />
+                                                </VerticalStackLayout>
+
+                                            </Grid>
+
+                                        </Grid>
+
+                                    </VerticalStackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <HorizontalStackLayout Spacing="8">
+                        <Button Text="Dodaj przypomnienie"
+                                Clicked="OnAddReminderClicked"
+                                HorizontalOptions="StartAndExpand" />
+
+                        <Button Text="Zapisz powiadomienia"
+                                Clicked="OnSaveRemindersClicked"
+                                HorizontalOptions="End" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <BoxView HeightRequest="1" Opacity="0.2" />
+
+                <!-- ================== USUWANIE AKWARIUM (NA DOLE) ================== -->
+                <Button Text="Usuń akwarium"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        Clicked="OnDeleteAquariumClicked" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

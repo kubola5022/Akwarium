@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nowy Profil",
+    "Projects": [
+      {
+        "Path": "AkwariumApi\\AkwariumApi.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\..\\Akwarium_najnowsze\\Akwarium\\Akwarium.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

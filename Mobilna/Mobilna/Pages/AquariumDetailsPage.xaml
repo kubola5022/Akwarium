@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.AquariumDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Parametry akwarium">
+
+    <VerticalStackLayout Padding="20" Spacing="12">
+
+        <Label x:Name="AquariumNameLabel"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#222" />
+
+        <Button Text="Odśwież"
+                Clicked="OnRefreshClicked"
+                HorizontalOptions="Center" />
+
+        <CollectionView x:Name="SensorsCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,6"
+                           Padding="12"
+                           BackgroundColor="#2B2D42"
+                           CornerRadius="12"
+                           HasShadow="True">
+
+                        <VerticalStackLayout Spacing="2">
+                            <Label Text="{Binding SensorName}"
+                                   FontSize="18"
+                                   FontAttributes="Bold" />
+
+                            <Label Text="{Binding Type}"
+                                   FontSize="12"
+                                   TextColor="White" />
+
+                            <Label Text="{Binding FormattedValue}"
+                                   FontSize="16" />
+
+                            <Label Text="{Binding FormattedTime}"
+                                   FontSize="10"
+                                   TextColor="White" />
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

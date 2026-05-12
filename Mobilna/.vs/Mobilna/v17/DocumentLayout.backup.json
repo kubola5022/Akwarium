@@ -1,0 +1,55 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kuba\\source\\repos\\calosc\\Mobilna\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{92AF5A4A-3EC3-49A0-9B5F-CAA640E3828E}|Mobilna\\Mobilna.csproj|c:\\users\\kuba\\source\\repos\\calosc\\mobilna\\mobilna\\apiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92AF5A4A-3EC3-49A0-9B5F-CAA640E3828E}|Mobilna\\Mobilna.csproj|solutionrelative:mobilna\\apiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\kuba\\source\\repos\\calosc\\Mobilna\\Mobilna\\ApiConfig.cs",
+              "RelativeDocumentMoniker": "Mobilna\\ApiConfig.cs",
+              "ToolTip": "C:\\Users\\kuba\\source\\repos\\calosc\\Mobilna\\Mobilna\\ApiConfig.cs",
+              "RelativeToolTip": "Mobilna\\ApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-06T17:18:58.127Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

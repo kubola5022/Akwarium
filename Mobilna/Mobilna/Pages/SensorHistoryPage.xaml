@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.SensorHistoryPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+	<Grid Padding="20" RowDefinitions="Auto,Auto,Auto,Auto,Auto,*" RowSpacing="16">
+
+		<Label Grid.Row="0"
+               Text="Historia pomiarów"
+               FontSize="24"
+               FontAttributes="Bold" />
+
+		<Picker Grid.Row="1"
+                x:Name="SensorsPicker"
+                Title="Wybierz czujnik" />
+
+		<HorizontalStackLayout Grid.Row="2" Spacing="8">
+			<Button Text="Dzień"
+                    x:Name="DayButton"
+                    CommandParameter="day"
+                    Clicked="OnRangeClicked" />
+			<Button Text="Tydzień"
+                    x:Name="WeekButton"
+                    CommandParameter="week"
+                    Clicked="OnRangeClicked" />
+			<Button Text="Miesiąc"
+                    x:Name="MonthButton"
+                    CommandParameter="month"
+                    Clicked="OnRangeClicked" />
+		</HorizontalStackLayout>
+
+		<DatePicker Grid.Row="3" x:Name="SelectedDatePicker" />
+
+		<Button Grid.Row="4"
+                Text="Pokaż pomiary"
+                Clicked="OnLoadHistoryClicked" />
+
+		<Grid Grid.Row="5" RowDefinitions="Auto,*" RowSpacing="8">
+
+			<Label x:Name="EmptyLabel"
+                   Text="Brak pomiarów dla wybranego zakresu."
+                   IsVisible="False"
+                   HorizontalOptions="Center" />
+
+		
+			<Frame Grid.Row="1"
+                   BorderColor="LightGray"
+                   CornerRadius="12"
+                   Padding="0">
+
+				<ScrollView Orientation="Horizontal">
+
+					<Grid RowDefinitions="Auto,Auto,*"
+                          MinimumWidthRequest="360">
+
+						
+						<Grid Padding="10"
+                              ColumnDefinitions="220,100"
+                              BackgroundColor="#F0F0F0">
+							<Label Text="Data i godzina"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"
+                                   LineBreakMode="NoWrap" />
+							<Label Grid.Column="1"
+                                   Text="Wartość"
+                                   FontAttributes="Bold"
+                                   TextColor="Black"
+                                   HorizontalTextAlignment="End"
+                                   LineBreakMode="NoWrap" />
+						</Grid>
+
+						<BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="LightGray" />
+
+						
+						<CollectionView Grid.Row="2"
+                                        x:Name="HistoryCollectionView"
+                                        SelectionMode="None"
+                                        ItemSizingStrategy="MeasureFirstItem">
+
+							<CollectionView.ItemTemplate>
+								<DataTemplate>
+									<Grid RowDefinitions="Auto,Auto">
+
+										<Grid Padding="10"
+                                              ColumnDefinitions="220,100">
+											<Label Text="{Binding TimeAdded, StringFormat='{}{0:dd.MM.yyyy HH:mm}'}"
+                                                   LineBreakMode="NoWrap" />
+											<Label Grid.Column="1"
+                                                   Text="{Binding Value, StringFormat='{0:F2}'}"
+                                                   HorizontalTextAlignment="End"
+                                                   LineBreakMode="NoWrap" />
+										</Grid>
+
+										
+										<BoxView Grid.Row="1"
+                                                 HeightRequest="1"
+                                                 BackgroundColor="#E0E0E0" />
+
+									</Grid>
+								</DataTemplate>
+							</CollectionView.ItemTemplate>
+
+						</CollectionView>
+
+					</Grid>
+
+				</ScrollView>
+
+			</Frame>
+
+		</Grid>
+
+	</Grid>
+</ContentPage>

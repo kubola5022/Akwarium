@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+
+	<!-- Woda w akwarium -->
+	<defs>
+		<linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#0EA5E9"/>
+			<stop offset="100%" stop-color="#0369A1"/>
+		</linearGradient>
+	</defs>
+	<rect x="106" y="182" width="300" height="200" rx="36" ry="36"
+		  fill="url(#waterGrad)"/>
+
+	<!-- Fala wody -->
+	<path d="M106 210 C150 190 190 230 230 210 C270 190 310 230 350 210 C380 195 406 200 406 200 L406 250 L106 250 Z"
+		  fill="#38BDF8" opacity="0.5"/>
+
+	<!-- Rybka -->
+	<g transform="translate(180,235)">
+		<ellipse cx="80" cy="40" rx="42" ry="28" fill="#F97316"/>
+		<polygon points="120,40 150,20 150,60" fill="#EA580C"/>
+		<circle cx="70" cy="35" r="6" fill="#0B1120"/>
+		<circle cx="68" cy="33" r="2" fill="#FFFFFF"/>
+		<path d="M70 18 C80 0 100 0 110 12" fill="#FDBA74" opacity="0.9"/>
+	</g>
+
+	<!-- Bąbelki -->
+	<circle cx="160" cy="200" r="6" fill="#E0F2FE" opacity="0.9"/>
+	<circle cx="148" cy="178" r="4" fill="#E0F2FE" opacity="0.7"/>
+	<circle cx="172" cy="164" r="3" fill="#E0F2FE" opacity="0.6"/>
+
+	<!-- Lekki połysk szkła -->
+	<path d="M116 132 C140 120 180 118 210 130"
+		  stroke="#E0F2FE" stroke-width="5" stroke-linecap="round" opacity="0.4"/>
+
+</svg>

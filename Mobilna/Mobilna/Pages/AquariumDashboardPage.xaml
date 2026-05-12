@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.AquariumDashboardPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Akwarium">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label x:Name="AquariumNameLabel"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
+
+            <Label Text="Co chcesz zrobić?"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="#555" />
+
+            <!-- Kafel: czujniki -->
+            <Frame Padding="16"
+                   CornerRadius="16"
+                   BackgroundColor="#2B2D42"
+                   HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSensorsTapped" />
+                </Frame.GestureRecognizers>
+
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <Label Text="🧪"
+                           FontSize="26" />
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Czujniki i aktualne parametry"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="White" />
+                        <Label Text="Zobacz bieżącą temperaturę i inne odczyty"
+                               FontSize="12"
+                               TextColor="#E0E0E0" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Kafel: historia -->
+            <Frame Padding="16"
+                   CornerRadius="16"
+                   BackgroundColor="#2B2D42"
+                   HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnHistoryTapped" />
+                </Frame.GestureRecognizers>
+
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <Label Text="📈"
+                           FontSize="26" />
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Historia temperatury"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="White" />
+                        <Label Text="Zobacz wykres zmian w czasie (TODO)"
+                               FontSize="12"
+                               TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Kafel: sterowanie -->
+            <Frame Padding="16"
+                   CornerRadius="16"
+                   BackgroundColor="#2B2D42"
+                   HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnControlTapped" />
+                </Frame.GestureRecognizers>
+
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <Label Text="💡"
+                           FontSize="26" />
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Sterowanie urządzeniami"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="White" />
+                        <Label Text="Oświetlenie, pompki, itp. (TODO)"
+                               FontSize="12"
+                               TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- Kafel: ustawienia -->
+            <Frame Padding="16"
+                   CornerRadius="16"
+                   BackgroundColor="#2B2D42"
+                   HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSettingsTapped" />
+                </Frame.GestureRecognizers>
+
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <Label Text="⚙️"
+                           FontSize="26" />
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Ustawienia akwarium"
+                               FontSize="16"
+                               FontAttributes="Bold"
+                               TextColor="White" />
+                        <Label Text="Nazwa, przypisany sensor, itp. (TODO)"
+                               FontSize="12"
+                               TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+			<!--kamera!-->
+
+			<Frame Padding="16"
+       CornerRadius="16"
+       BackgroundColor="#2B2D42"
+       HasShadow="True">
+				<Frame.GestureRecognizers>
+					<TapGestureRecognizer Tapped="OnCameraTapped" />
+				</Frame.GestureRecognizers>
+
+				<HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+					<Label Text="📷"
+						   FontSize="26" />
+					<VerticalStackLayout Spacing="2">
+						<Label Text="Podgląd kamery"
+							   FontSize="16"
+							   FontAttributes="Bold"
+							   TextColor="White" />
+						<Label Text="Zobacz obraz z kamery nad akwarium"
+							   FontSize="12"
+							   TextColor="White" />
+					</VerticalStackLayout>
+				</HorizontalStackLayout>
+			</Frame>
+
+
+            <Frame Padding="16"
+       CornerRadius="16"
+       BackgroundColor="#2B2D42"
+       HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWebTapped" />
+                </Frame.GestureRecognizers>
+
+                <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                    <Label Text="🌐"
+               FontSize="26" />
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Aplikacja Webowa"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   TextColor="White" />
+                        <Label Text="Analiza danych, konfiguracja akwarium"
+                   FontSize="12"
+                   TextColor="White" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

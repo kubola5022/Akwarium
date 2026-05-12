@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "754111514764",
+    "project_id": "akwarium-a048b",
+    "storage_bucket": "akwarium-a048b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754111514764:android:9287a75d2b198e375913a9",
+        "android_client_info": {
+          "package_name": "com.companyname.mobilna"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8Q4Uo2NeOKyW0Vsm3KcPBen-QKx4Sj10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

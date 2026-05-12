@@ -1,0 +1,6 @@
+@AkwariumApi_HostAddress = http://localhost:5264
+
+GET {{AkwariumApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

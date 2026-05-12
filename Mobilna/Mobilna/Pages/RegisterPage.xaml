@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.RegisterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Rejestracja">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="Utwórz konto"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="EmailEntry"
+                   Placeholder="E-mail"
+                   Keyboard="Email" />
+
+            <Entry x:Name="LoginEntry"
+                   Placeholder="Login" />
+
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Hasło"
+                   IsPassword="True" />
+
+            <Entry x:Name="ConfirmPasswordEntry"
+                   Placeholder="Powtórz hasło"
+                   IsPassword="True" />
+
+            <Button Text="Zarejestruj"
+                    Clicked="OnRegisterClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

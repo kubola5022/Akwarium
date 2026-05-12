@@ -1,0 +1,11 @@
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\bin\Debug\net8.0\AkwariumShared.deps.json
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\bin\Debug\net8.0\AkwariumShared.dll
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\bin\Debug\net8.0\AkwariumShared.pdb
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\AkwariumShared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\AkwariumShared.AssemblyInfoInputs.cache
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\AkwariumShared.AssemblyInfo.cs
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\AkwariumShared.csproj.CoreCompileInputs.cache
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\AkwariumShared.dll
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\refint\AkwariumShared.dll
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\AkwariumShared.pdb
+C:\Users\kuba\source\repos\calosc\Mobilna\AkwariumShared\obj\Debug\net8.0\ref\AkwariumShared.dll

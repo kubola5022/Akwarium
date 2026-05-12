@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Mobilna.AquariumsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Twoje akwaria">
+
+    <!-- Grid daje pewność, że lista ma zawsze miejsce -->
+    <Grid Padding="20"
+          RowDefinitions="Auto,*"
+          RowSpacing="10">
+
+        <Label Grid.Row="0"
+               Text="Wybierz akwarium"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <CollectionView Grid.Row="1"
+                        x:Name="AquariumsCollectionView"
+                        SelectionMode="None"
+                        VerticalOptions="FillAndExpand">
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="10"
+                                     Spacing="12"
+                                     HorizontalOptions="Center"
+                                     VerticalOptions="Center">
+
+                    <Label Text="Brak akwariów"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Center"
+                           TextColor="Gray" />
+
+                    <Label Text="Dodaj swoje pierwsze akwarium w aplikacji webowej, a potem wróć tutaj."
+                           FontSize="12"
+                           Opacity="0.7"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
+                           TextColor="Gray" />
+
+                    <Button Text="Przejdź do aplikacji webowej"
+                            Clicked="OnGoToWebAppClicked"
+                            HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,8"
+                           Padding="14"
+                           HasShadow="True"
+                           CornerRadius="16"
+                           BackgroundColor="#2B2D42"
+                           BorderColor="#8D99AE">
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnAquariumTapped" />
+                        </Frame.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="4">
+                            <Label Text="{Binding AquariumName}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="White" />
+
+                            <Label Text="{Binding AquariumId, StringFormat='ID: {0}'}"
+                                   FontSize="12"
+                                   TextColor="#D9D9D9" />
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
+</ContentPage>
