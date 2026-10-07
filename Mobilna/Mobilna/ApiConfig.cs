@@ -8,6 +8,6 @@ namespace Mobilna
 {
     internal class ApiConfig
     {
-        public const string BaseUrl = "http://10.85.203.241:5225";
+        public const string BaseUrl = "http://*********";
     }
 }
